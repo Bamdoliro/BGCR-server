@@ -51,7 +51,6 @@ public class User {
         this.profileImage = profileImage;
         this.githubId = githubId;
         this.githubBio = githubBio;
-
     }
 
 }
