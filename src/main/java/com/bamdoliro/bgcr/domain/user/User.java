@@ -1,13 +1,13 @@
 package com.bamdoliro.bgcr.domain.user;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
+@Getter
 @Entity
-@NoArgsConstructor
-public class BgcrUser {
+@Table(name = "tbl_user")
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
@@ -15,19 +15,19 @@ public class BgcrUser {
     @Column(nullable = false, length = 50)
     private String name;
 
-    @Column(nullable = false, length = 15)
+    @Column(nullable = false)
     private int studentNumber;
 
-    @Column(nullable = false, length = 10)
+    @Column(nullable = false)
     private int admissionYear;
 
     @Column(nullable = false, length = 50)
     private String email;
 
-    @Column(nullable = false, length = 10)
+    @Column(nullable = false)
     private int rank;
 
-    @Column(nullable = false, length = 10)
+    @Column(nullable = false)
     private int amountOfCommit;
 
     @Column(nullable = false, length = 300)
@@ -40,7 +40,7 @@ public class BgcrUser {
     private String githubBio;
 
     @Builder
-    public BgcrUser(Long userId, String name, int studentNumber, int admissionYear, String email, int rank, int amountOfCommit, String profileImage, String githubId, String githubBio){
+    public User(Long userId, String name, int studentNumber, int admissionYear, String email, int rank, int amountOfCommit, String profileImage, String githubId, String githubBio){
         this.userId = userId;
         this.name = name;
         this.studentNumber = studentNumber;
