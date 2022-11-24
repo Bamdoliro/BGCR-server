@@ -1,4 +1,4 @@
-package com.bamdoliro.bgcr.domain.user;
+package com.bamdoliro.bgcr.user.domain;
 import lombok.*;
 
 import javax.persistence.*;
