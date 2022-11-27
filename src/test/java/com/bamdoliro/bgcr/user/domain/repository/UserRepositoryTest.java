@@ -22,8 +22,10 @@ class UserRepositoryTest {
         //given
         String name = "김석진";
         final User user = User.builder().name(name).build();
+
         //when
         final User savedUser = userRepository.save(user);
+
         //then
         assertEquals(name, savedUser.getName());
 
