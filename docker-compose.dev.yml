@@ -2,13 +2,13 @@ version: '3'
 
 services:
   mysql:
-    container_name: bamdoliro_gati_local
+    container_name: bamdoliro_bgcr_local
     image: mysql/mysql-server:5.7
     environment:
       MYSQL_ROOT_HOST: "%"
       MYSQL_USER: "bamdoliro"
       MYSQL_PASSWORD: "bamdoliro"
-      MYSQL_DATABASE: "bamdoliro_gati"
+      MYSQL_DATABASE: "bamdoliro_bgcr"
     ports:
       - "3307:3306"
     command:
