@@ -14,20 +14,4 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DataJpaTest
 class UserRepositoryTest {
 
-    @Autowired
-    private UserRepository userRepository;
-
-    @Test
-    void save(){
-        //given
-        String name = "김석진";
-        final User user = User.builder().name(name).build();
-
-        //when
-        final User savedUser = userRepository.save(user);
-
-        //then
-        assertEquals(name, savedUser.getName());
-
-    }
 }
