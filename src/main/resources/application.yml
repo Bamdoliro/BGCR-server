@@ -1,8 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:mysql://127.0.0.1:3307/bamdoliro_bgcr
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: bamdoliro
-    password: bamdoliro
-
-debug: true
